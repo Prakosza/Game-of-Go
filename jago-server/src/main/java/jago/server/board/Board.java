@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 public class Board {
 
-    protected LinkedList<int[]> Deads;// list of dead
+    protected LinkedList<int[]> Deads;// list of deads
     Square newStone;// fresh new stone
-    Square[][] board; // array of square
+    Square[][] board; // array of squares
     private final int size;
     int[] cant; // can't-put-there-any-stone-of-selected-colour value
 
@@ -84,7 +84,7 @@ public class Board {
         boolean returns = board[x][y].put(color);
         resetCant();
         if (returns) {
-            if (Deads.size() == 1) { // If the only one stone were killed
+            if (Deads.size() == 1) { // If only one stone was killed
                 // and stone which did that has only one breath
                 if (board[x][y].isFree(color) == 1 && board[x][y].myStone.Group.size() == 0) {
                     cant[0] = Deads.get(0)[0];// block it
@@ -104,7 +104,7 @@ public class Board {
     void putOwner(StoneColor color, int x, int y) {
         newStone = null;
         if (board[x][y].owner.equals(color)) { // if there is already owner set
-            // on state set empty
+            // on state empty
             board[x][y].owner = StoneColor.EMPTY;
         } else {
             board[x][y].owner = color;
@@ -172,7 +172,7 @@ public class Board {
         }
         for (int i = 0; i < size; i++) {// if there is a path to two
             // different-coloured stones or none then
-            // is neutral
+            // it's neutral
             for (int j = 0; j < size; j++) {
                 if (board[i][j].myStone == null) {
                     board[i][j].check = true;

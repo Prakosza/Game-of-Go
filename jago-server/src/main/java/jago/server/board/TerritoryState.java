@@ -20,7 +20,7 @@ public class TerritoryState implements State {
 	}
 
 	/**
-	 * State is which player turn it is
+	 * Which player turn it is
 	 */
 	@Override
 	public int getTurn() {
@@ -46,7 +46,7 @@ public class TerritoryState implements State {
 	}
 
 	/**
-	 * Make send
+	 * Make send/pass
 	 */
 	@Override
 	public void pass() {

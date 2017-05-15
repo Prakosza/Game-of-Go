@@ -69,8 +69,8 @@ public class Square {
 	}
 
 	/**
-	 * Check if I'm neutral it returns number which is can be divide by 2 if
-	 * there is black stone on path or death white and 3*n when is white or dead
+	 * Check if I'm neutral ,it returns number which is can be divide by 2 if
+	 * there is black stone on path or dead white and 3*n when is white or dead
 	 * black
 	 */
 	protected int isNeutral() {

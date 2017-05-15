@@ -10,7 +10,7 @@ public class Stone {
 	protected Stone myStone;
 
 	/**
-	 * Test if new stone can be put there and if not then not
+	 * Test if new stone can be put and if not then not
 	 */
 	protected Stone(StoneColor color, Square place) {
 		myColor = color;
@@ -18,8 +18,7 @@ public class Stone {
 		myPlace = place;
 		int result;
 		boolean killer = false;
-		for (Square neighbour : myPlace.neighbourSquare) { // if I kill any of my
-															// neighbour
+		for (Square neighbour : myPlace.neighbourSquare) { // if I kill any of my neighbour
 			if (neighbour.myStone != null) {
 				result = 0;
 				if (neighbour.myStone.myColor != myColor) {

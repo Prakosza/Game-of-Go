@@ -52,7 +52,7 @@ public class BotPlayer implements Player {
 	}
 
 	/**
-	 * place yourself stone
+	 * place your stone
 	 */
 	@Override
 	public void placeStone(int x, int y, int state) {

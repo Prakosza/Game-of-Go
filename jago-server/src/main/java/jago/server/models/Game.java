@@ -21,7 +21,7 @@ public class Game extends Thread {
 	}
 
 	/**
-	 * set Game object for Game
+	 * set Game object for players
 	 */
 	private void setGame(Player[] player) {
 		player[0].setGame(this);
@@ -29,7 +29,7 @@ public class Game extends Thread {
 	}
 
 	/**
-	 * Run object
+	 * Run game
 	 */
 	@Override
 	public void run() {
@@ -91,8 +91,7 @@ public class Game extends Thread {
 	}
 
 	/**
-	 * Make pass wait not not this do forfeit, close one, you woulnd't know
-	 * otherwise
+	 * Make pass... wait, no no, this do forfeit, close one, you woulnd't guess otherwise
 	 */
 	void forfeit() {
 		check = myMediator.gotForfeit();
@@ -103,7 +102,7 @@ public class Game extends Thread {
 	}
 
 	/**
-	 * This do rematch, gosh good thing you have me
+	 * This do rematch...
 	 */
 	void rematch() {
 		myMediator.setGame();
