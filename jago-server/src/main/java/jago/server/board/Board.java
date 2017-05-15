@@ -182,8 +182,10 @@ public class Board {
                     } else {
                         if (result % 2 == 0) {
                             board[i][j].owner = StoneColor.BLACK;
-                        } else {
+                        } else if (result % 3 == 0) {
                             board[i][j].owner = StoneColor.WHITE;
+                        } else {
+                            board[i][j].owner = StoneColor.EMPTY;
                         }
                     }
                     resetCheck();
